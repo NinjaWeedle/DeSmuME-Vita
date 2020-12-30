@@ -17,7 +17,7 @@ char* menu_FileBrowser() {
 	std::vector<SceIoDirent> entries;
 	SceUID directory;
 	SceIoDirent dirent;
-	directory = sceIoDopen("ux0:/data/desmume");
+	directory = sceIoDopen("ux0:/data");
 
 	while(sceIoDread(directory, &dirent) > 0){
 		char *extension = strrchr(dirent.d_name,'.');
