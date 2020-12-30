@@ -103,7 +103,7 @@ static inline void calc_fps(char fps_str[32])
 
 	if (diff >= FPS_CALC_INTERVAL) {
 		fps = frames / ((diff/1000)/1000.0f);
-		sprintf(fps_str, "FPS: %.2f", fps);
+		sprintf(fps_str, " %.2f", fps);
 		frames = 0;
 		sceKernelGetProcessTime(&old);
 	}
